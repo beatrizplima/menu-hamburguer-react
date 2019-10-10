@@ -11,11 +11,27 @@ const Cadastro = () => {
   const [id, setId] = useState(1);
 
   const gerarPersonagem = () => {
-    setId(id + 1)
+    if (id === 494){
+      setId(1);
+    }else{
+      setId(id + 1)
+    }
   }
 
   const handleSubmit = e => {
     e.preventDefault();
+    const payload = {
+      name: nome,
+      email: email,
+      confirm_email: confirmEmail,
+      password: senha
+    }
+    setNome("");
+    setEmail("");
+    setConfirmEmail("");
+    setSenha("");
+
+    console.log(payload)
   };
 
 
