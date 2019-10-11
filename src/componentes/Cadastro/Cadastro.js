@@ -43,10 +43,8 @@ const Cadastro = () => {
       setConfirmEmail("");
       setSenha("");
       resposta("Cadastro realizado com sucesso");
-      setStatus(true);
     }else {
-      resposta("Os emails não correspondem")
-      setStatus(false);
+      resposta("Os emails não correspondem");
     }
     }
 
