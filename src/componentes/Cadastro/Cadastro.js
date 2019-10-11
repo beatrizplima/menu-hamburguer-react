@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from 'react-router-dom';
 import Input from "../Input.js";
 
 import "./Cadastro.scss";
@@ -10,7 +11,8 @@ const Cadastro = () => {
   const [senha, setSenha] = useState("");
   const [id, setId] = useState(1);
   const [count, setCount] = useState (1);
-  const [mensagem, setMensagem] = useState("")
+  const [mensagem, setMensagem] = useState("");
+  const [status, setStatus] = useState(false);
 
   const gerarPersonagem = () => {
     if (id === 494){
@@ -43,6 +45,7 @@ const Cadastro = () => {
       setConfirmEmail("");
       setSenha("");
       resposta("Cadastro realizado com sucesso");
+      window.open("http://localhost:3000/produtos")
     }else {
       resposta("Os emails não correspondem");
     }
@@ -99,7 +102,7 @@ const Cadastro = () => {
           atualizarState={setSenha}
           obrigatorio
         />
-        <button>Cadastrar</button>
+          <button>Cadastrar</button>
       </form>
     </div>
   );
