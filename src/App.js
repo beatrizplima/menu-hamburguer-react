@@ -10,6 +10,7 @@ const App = () => {
       <Navbar />
       <Route exact path="/" component={Home} />
       <Route path="/cadastro" component={Cadastro} />
+      
     </BrowserRouter>
   )
 }
