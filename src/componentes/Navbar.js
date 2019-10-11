@@ -27,9 +27,9 @@ const Navbar = () => {
     <div className="Navbar">
       <nav>
         <div onClick={abrirMenu} id="menu-hamburguer">
-          <span className={`${menuAtivo ? 'virarX1' : '' }`}></span>
-          <span className={`${menuAtivo ? 'sumir' : '' }`}></span>
-          <span className={`${menuAtivo ? 'virarX2' : '' }`}></span>
+          <span className={`${menuAtivo ? 'virarX1' : ''}`}></span>
+          <span className={`${menuAtivo ? 'virarX2' : ''}`}></span>
+          <span className={`${menuAtivo ? 'sumir' : ''}`}></span>
         </div>
       </nav>
       <section className={`menu ${menuAtivo ? "ativo" : ""}`}>

@@ -9,18 +9,18 @@ const Cadastro = () => {
   const [email, setEmail] = useState("");
   const [confirmEmail, setConfirmEmail] = useState("");
   const [senha, setSenha] = useState("");
-  const [id, setId] = useState(1);
+  // const [id, setId] = useState(1);
   const [count, setCount] = useState (1);
   const [mensagem, setMensagem] = useState("");
   const [status, setStatus] = useState(false);
 
-  const gerarPersonagem = () => {
-    if (id === 494){
-      setId(1);
-    }else{
-      setId(id + 1)
-    }
-  }
+  // const gerarPersonagem = () => {
+  //   if (id === 494){
+  //     setId(1);
+  //   }else{
+  //     setId(id + 1)
+  //   }
+  // }
 
   const resposta = (texto) => {
     setMensagem(texto);
@@ -38,8 +38,10 @@ const Cadastro = () => {
         confirm_email: confirmEmail,
         password: senha
       }
-      localStorage.setItem(`Dados${count}`, JSON.stringify(payload));
-        setCount(count + 1);
+      localStorage.setItem(`Name`, (payload.name));
+      localStorage.setItem(`Email`, (payload.email));
+      localStorage.setItem(`Senha`, (payload.password));
+      setCount(count + 1);
       setNome("");
       setEmail("");
       setConfirmEmail("");
@@ -47,27 +49,28 @@ const Cadastro = () => {
       resposta("Cadastro realizado com sucesso");
       window.open("http://localhost:3000/produtos")
     }else {
-      resposta("Os emails não correspondem");
+      resposta("Os emails não correspondem")
+      
     }
     }
 
-  useEffect(()=>{
-    fetch(`https://rickandmortyapi.com/api/character/${id}`, {
-      method: "GET"
-    }).then(result=>{
-      return result.json()
-    }).then(data=>{
-      console.log(data)
-    }).catch(() => {
-      console.error('deu ruim')
-    })
-  },[id])
+  // useEffect(()=>{
+  //   fetch(`https://rickandmortyapi.com/api/character/${id}`, {
+  //     method: "GET"
+  //   }).then(result=>{
+  //     return result.json()
+  //   }).then(data=>{
+  //     console.log(data)
+  //   }).catch(() => {
+  //     console.error('deu ruim')
+  //   })
+  // },[id])
 
 
   return (
     <div className="Cadastro">
       <h1>Faça seu cadastro</h1>
-      <button onClick={gerarPersonagem}>Gerar Personagem</button>
+      {/* <button onClick={gerarPersonagem}>Gerar Personagem</button> */}
       <p>{mensagem}</p>
       <form onSubmit={handleSubmit}>
         <Input
