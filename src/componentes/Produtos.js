@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import "./Produtos.scss";
+
+import './Produtos.scss';
 
 
 
@@ -16,6 +17,13 @@ const Produtos = () => {
         <div>
         <h2>{`Seja bem vindo ${texto}`}</h2>
         <h3></h3>
+       
+            <div className='imagem1'></div>
+            <div>Tenis nike do futuro</div>
+            <button>+</button>
+            <button>-</button>
+            <button>Comprar</button>
+        
         </div>
     )
 }

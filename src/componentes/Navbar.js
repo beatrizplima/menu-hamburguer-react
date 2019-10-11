@@ -1,4 +1,9 @@
 import React, { useState } from "react";
+
+
+
+
+
 import { Link } from 'react-router-dom';
 
 import "./Navbar.scss";
@@ -29,8 +34,8 @@ const Navbar = () => {
         <Link onClick={fecharMenu} to="/carrinho">Carrinho</Link>
         <Link onClick={fecharMenu} to="/produtos">Produtos</Link>
         <Link onClick={fecharMenu} to="/cadastro">
-                    <button>Cadastrar</button>
-                </Link>
+        <button>Cadastrar</button>
+        </Link>
       </section>
     </div>
   );
