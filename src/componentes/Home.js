@@ -9,7 +9,7 @@ const Home = () => {
             <header></header>
             <div>
                 <Link to="/cadastro">
-                    <button>Cadastrar</button>
+                    <button className="Botao">Cadastrar</button>
                 </Link>
             </div>
         </div>

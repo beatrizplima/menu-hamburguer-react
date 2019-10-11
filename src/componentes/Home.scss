@@ -1,6 +1,6 @@
 .Home {
   header {
-    background-image: url(../imagens/pipocas.jpg);
+    background-image: url(../imagens/nike.png);
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -11,6 +11,20 @@
     height: 150px;
     display: flex;
     align-items: center;
+    justify-content: flex-start;
+  }
+  .Botao{
+    display: flex;
+    width: 200px;
+    height: 40px;
+    border-radius: 30px;
+    align-items: center;
     justify-content: center;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+    color:rgba(0, 0, 0, 0.37);
+    border: none;
+    background-color:rgb(204, 98, 49);
   }
 }
