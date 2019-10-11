@@ -1,8 +1,5 @@
 import React, { useState } from "react";
-import Produtos from './Produtos';
-import Pagamento from './Pagamento';
-import Carrinho from './Carrinho';
-import Cadastro from './Cadastro/Cadastro';
+
 
 
 
